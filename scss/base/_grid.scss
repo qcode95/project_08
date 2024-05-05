@@ -3,21 +3,20 @@
 // * ============================== Variables ============================== * /
 // ? Map chứa các key-value là các min-width cho từng breakpoint
 $grid-breakpoints: (
-    xs: 0,
-    sm: 576px,
-    md: 768px,
-    lg: 992px,
-    xl: 1200px,
     xxl: 1400px,
+    xl: 1200px,
+    lg: 992px,
+    md: 768px,
+    sm: 576px,
 );
 
 // ? Map chứa các key-value là các max-width cho từng container của từng breakpoint
 $container-max-widths: (
-    sm: 540px,
-    md: 720px,
-    lg: 960px,
-    xl: 1140px,
-    xxl: 1370px,
+    sm: 100%,
+    md: 540px,
+    lg: 720px,
+    xl: 960px,
+    xxl: 1140px,
 );
 
 // ? Map chứa các key-value là các trọng số - giá trị cho từng gutter của từng breakpoint
@@ -59,6 +58,7 @@ $grid-gutter-width: 30px !default;
 // ? Container cho breakpoint xs
 .container {
     @extend .container-fluid;
+    width: 1370px;
 }
 
 // ? Row của grid-system
@@ -82,18 +82,14 @@ $grid-gutter-width: 30px !default;
 
 // * ============================== Mixins ============================== * /
 // ? mixin để tạo ra các @media cho từng breakpoint
-@mixin make-media-query($dimension, $remove: false) {
-    @if $remove {
+@mixin make-media-query($dimension) {
+    @media screen and (max-width: ($dimension - 0.02)) {
         @content;
-    } @else {
-        @media screen and (min-width: $dimension) {
-            @content;
-        }
     }
 }
 
 // ? mixin để tạo ra các class row-cols-*
-@mixin make-row-columns($infix) {
+@mixin make-row-columns($infix: null) {
     // * ================================================================================== * /
     // ? Lặp từ 1-6 để tạo ra các row-cols-* cho từng breakpoint
     // ? infix ở giữa là từng breakpoint sẽ có các infix khác nhau như: sm, md, lg,...
@@ -110,7 +106,7 @@ $grid-gutter-width: 30px !default;
 }
 
 // ? mixin để tạo ra các class col-*
-@mixin make-columns($infix) {
+@mixin make-columns($infix: null) {
     // * ================================================================================== * /
     // ? Lặp từ 1-12 để tạo ra các col-* cho từng breakpoint
     // ? infix ở giữa là từng breakpoint sẽ có các infix khác nhau như: sm, md, lg,...
@@ -127,7 +123,7 @@ $grid-gutter-width: 30px !default;
 }
 
 // ? mixin để tạo ra các class offset-*
-@mixin make-offsets($infix) {
+@mixin make-offsets($infix: null) {
     // * ================================================================================== * /
     // ? Lặp từ 1-11 để tạo ra các offset-* cho từng breakpoint
     // ? infix ở giữa là từng breakpoint sẽ có các infix khác nhau như: sm, md, lg,...
@@ -143,7 +139,7 @@ $grid-gutter-width: 30px !default;
 }
 
 // ? mixin để tạo ra các class g-*
-@mixin make-gutters($infix) {
+@mixin make-gutters($infix: null) {
     @each $i, $ratio in $gutters {
         .g#{$infix}-#{$i},
         .gx#{$infix}-#{$i} {
@@ -156,6 +152,18 @@ $grid-gutter-width: 30px !default;
         }
     }
 }
+
+// ? include mixin để tạo các class row-cols-*
+@include make-row-columns();
+
+// ? include mixin để tạo các class col-*
+@include make-columns();
+
+// ? include mixin để tạo các class offset-*
+@include make-offsets();
+
+// ? include mixin để tạo các class g-*
+@include make-gutters();
 
 // * ============================== Loop To Create @media ============================== * /
 // ? Lặp qua map $grid-breakpoints để lấy được key làm breakpoint và value làm dimension
@@ -170,19 +178,15 @@ $grid-gutter-width: 30px !default;
         $key: $breakpoint,
     );
 
-    // ? Biến để chứa điều kiện bị lặp lại nhiều lần
-    // * ================================================================================== * /
-    $is-xs: $breakpoint == xs;
-
     // * ================================================================================== * /
     // ? Biến để lưu trữ infix trong trường hợp breakpoint xs sẽ không có infix xs
     // ? Vì khi breakpoint là xs thì trả ra chuỗi rỗng nên cần thêm "-" vào $breakpoint
     // ? thêm "-" để tránh trường hợp col--1, col--2,...
     // * ================================================================================== * /
-    $infix: if($is-xs, "", "-#{$breakpoint}");
+    $infix: "-#{$breakpoint}";
 
     // ? include mixin để có thể tạo ra các @media cho từng breakpoint
-    @include make-media-query($dimension, $is-xs) {
+    @include make-media-query($dimension) {
         .container {
             max-width: $max-width;
         }
