@@ -1,0 +1,32 @@
+$device-breakpoints: (
+    // ? Sắp xếp breakpoint ngược lại bởi vì đang làm desktop first nên cần desktop được ưu tiên hơn
+    xxl: 1400px,
+    xl: 1200px,
+    lg: 992px,
+    md: 768px,
+    sm: 576px
+);
+
+$display-values: block, flex, grid, none;
+
+// ? @mixin để tạo ra các class d-*, d-infix-* cho từng breakpoint
+@mixin make-display($breakpoint: null) {
+    $infix: if($breakpoint, "-#{$breakpoint}", "");
+
+    @each $display in $display-values {
+        .d#{$infix}-#{$display} {
+            display: $display !important;
+        }
+    }
+}
+
+// ? @include mixin để tạo ra các class d-*
+@include make-display();
+
+// ? Tạo vòng lặp để tạo ra các class d-infix-* cho từng breakpoint
+@each $breakpoint, $dimension in $device-breakpoints {
+    @media screen and (max-width: ($dimension - 0.02)) {
+        // ? @include mixin để tạo ra các class d-infix-* cho từng breakpoint
+        @include make-display($breakpoint);
+    }
+}

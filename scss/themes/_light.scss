@@ -3,8 +3,8 @@
 html {
     // ? Light theme text/icon-color
     --text-color: #1a162e;
-    --icon-color: brightness(0) saturate(100%) invert(9%) sepia(9%)
-        saturate(4431%) hue-rotate(212deg) brightness(88%) contrast(95%);
+    --icon-color: brightness(0) saturate(100%) invert(9%) sepia(9%) saturate(4431%) hue-rotate(212deg) brightness(88%)
+        contrast(95%);
 
     // ? Light theme bg/shadow-color
     --body-bg-color: #f6f6f6;
@@ -22,4 +22,8 @@ html {
     --dropdown-bg-color: #fff;
     --dropdown-shadow-color: rgba(200, 200, 200, 0.4);
     --drop-menu-main-border-color: #d2d1d6;
+
+    // ? Light theme sidebar color
+    --sidebar-bg-color: #fff;
+    --sidebar-shadow-color: rgba(200, 200, 200, 0.4);
 }
