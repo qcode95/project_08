@@ -1362,6 +1362,7 @@ html.dark {
 
 .top-bar {
   position: relative;
+  z-index: 1;
   padding: 30px 0;
 }
 @media screen and (max-width: 991.98px) {
@@ -1604,7 +1605,6 @@ html.dark {
 .dropdown {
   position: absolute;
   left: 0;
-  z-index: 1;
   width: min(1240px, 100%);
   padding-top: 54px;
   display: none;
