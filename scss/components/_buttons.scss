@@ -1,3 +1,69 @@
+// ? Buttons
+.btn {
+    height: 46px;
+    padding: 0 20px;
+    border-radius: 6px;
+
+    background: #f8f8f8;
+
+    font-size: 1.8rem;
+    font-weight: 500;
+
+    cursor: pointer;
+    user-select: none;
+
+    transition: opacity, outline-width, background;
+    transition-duration: 0.3s;
+
+    + .btn {
+        margin-left: 20px;
+    }
+
+    &--text {
+        font-weight: 400;
+
+        color: #9e9da8;
+        background: transparent;
+    }
+
+    &--primary {
+        color: #1a162e;
+        background: #ffb700;
+    }
+
+    &--outline {
+        outline: 1px solid #d2d1d6;
+
+        background: transparent;
+    }
+
+    &--rounded {
+        border-radius: 99px;
+    }
+
+    &[disable],
+    &--disabled {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+
+    &--outline:hover,
+    &:hover {
+        outline: transparent;
+        background: #ffb700;
+    }
+
+    &--text:hover {
+        outline: 1px solid #d2d1d6;
+
+        background: transparent;
+    }
+
+    &--primary:hover {
+        opacity: 0.9;
+    }
+}
+
 // ? Filter Button
 .filter-btn {
     display: flex;

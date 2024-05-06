@@ -45,4 +45,10 @@ html.dark {
     // ? Dark theme product card
     --product-card-bg-color: #171c28;
     --product-card-shadow-color: rgba(0, 0, 0, 0.2);
+
+    // ? Dark theme filter form
+    --filter-form-bg-color: #373d4c;
+    --filter-form-shadow-color: rgba(0, 0, 0, 0.4);
+    --filter-form-tag-bg-color: #171c28;
+    --filter-form-arrow: var(--dropdown-arrow-color);
 }
