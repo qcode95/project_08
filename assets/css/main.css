@@ -1908,7 +1908,6 @@ html.dark {
   padding: 20px 26px;
   border-radius: 16px;
   background: var(--cate-item-bg-color);
-  cursor: pointer;
   transition: translate 0.25s;
 }
 .cate-item:hover {
