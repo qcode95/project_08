@@ -26,4 +26,24 @@ html {
     // ? Light theme sidebar color
     --sidebar-bg-color: #fff;
     --sidebar-shadow-color: rgba(200, 200, 200, 0.4);
+
+    // ? Light theme browse categories
+    --cate-item-bg-color: #eee;
+    --cate-item-thumb-bg-color: #fff;
+    --cate-item-title-color: #000;
+
+    @include abstracts.screen(md) {
+        --cate-item-bg-color: #fff;
+    }
+
+    // ? Light theme buttons
+    --filter-btn-text-color: #6c6c72;
+    --filter-btn-bg-color: #fff;
+
+    --like-btn-bg-color: #fff;
+    --like-btn-shadow-color: rgba(124, 124, 124, 0.2);
+
+    // ? Light theme product card
+    --product-card-bg-color: #fff;
+    --product-card-shadow-color: rgba(237, 237, 246, 0.2);
 }

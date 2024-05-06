@@ -26,7 +26,23 @@ html.dark {
     --menu-column-icon-color: brightness(0) saturate(100%) invert(86%) sepia(2%) saturate(1866%) hue-rotate(201deg)
         brightness(116%) contrast(97%);
 
-    // ? Light theme sidebar color
+    // ? Dark theme sidebar color
     --sidebar-bg-color: #292e39;
     --sidebar-shadow-color: rgba(23, 28, 40, 0.4);
+
+    // ? Dark theme browse categories
+    --cate-item-bg-color: #171c28;
+    --cate-item-thumb-bg-color: #292e39;
+    --cate-item-title-color: #fff;
+
+    // ? Dark theme buttons
+    --filter-btn-text-color: #fff;
+    --filter-btn-bg-color: #171c28;
+
+    --like-btn-bg-color: #292e39;
+    --like-btn-shadow-color: rgba(124, 124, 124, 0.2);
+
+    // ? Dark theme product card
+    --product-card-bg-color: #171c28;
+    --product-card-shadow-color: rgba(0, 0, 0, 0.2);
 }
