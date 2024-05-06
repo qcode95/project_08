@@ -1325,6 +1325,7 @@ html {
       contrast(95%);
   --body-bg-color: #f6f6f6;
   --header-bg-color: #eee;
+  --footer-bg-color: var(--header-bg-color);
   --top-act-group-bg-color: #fff;
   --top-act-group-shadow: rgba(237, 237, 246, 0.2);
   --top-act-group-separate: #ededf6;
@@ -1620,6 +1621,202 @@ html.dark {
   }
 }
 
+.footer {
+  margin-top: 60px;
+  padding: 60px 0 30px 0;
+  background: var(--footer-bg-color);
+}
+.footer__row {
+  display: grid;
+  grid-template-columns: 2fr 1.3fr 1fr 1fr 1.5fr;
+  gap: 60px;
+}
+@media screen and (max-width: 991.98px) {
+  .footer__row {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .footer__logo-box .logo {
+    margin-left: 0;
+  }
+}
+.footer__desc {
+  padding: 30px 30px 0 0;
+  font-size: 1.7rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+.footer__desc-strong {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0071dc;
+}
+@media screen and (max-width: 991.98px) {
+  .footer__desc {
+    width: min(500px, 100%);
+  }
+}
+.footer__help-text {
+  margin-top: 30px;
+  letter-spacing: 2px;
+  font-size: 1.9rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #419df4;
+}
+.footer__heading {
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  font-weight: 900;
+}
+.footer__list {
+  margin-top: 20px;
+}
+.footer__link, .footer__text {
+  padding: 8px 0;
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+@media screen and (max-width: 991.98px) {
+  .footer__text {
+    width: 500px;
+  }
+}
+.footer__link {
+  display: inline-block;
+}
+.footer__link:hover {
+  font-weight: 500;
+  color: #0071dc;
+}
+.footer__text {
+  color: #7c7b83;
+}
+@media screen and (max-width: 991.98px) {
+  .footer__text {
+    width: min(400px, 100%);
+  }
+}
+.footer__label {
+  margin-top: 20px;
+  font-weight: 500;
+}
+.footer__form {
+  position: relative;
+  display: flex;
+  gap: 10px;
+  padding: 16px 0;
+}
+@media screen and (max-width: 1199.98px) {
+  .footer__form {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .footer__form {
+    flex-direction: row;
+  }
+}
+.footer__input {
+  width: 100%;
+  padding: 8px 50px 8px 12px;
+  border: 2px solid #d2d1d6;
+  border-radius: 99px;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.footer__input:focus {
+  border-color: #419df4;
+}
+.footer__input::placeholder {
+  font-weight: 400;
+}
+@media screen and (max-width: 991.98px) {
+  .footer__input {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .footer__input {
+    width: 50%;
+    font-size: 1.6rem;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  .footer__input {
+    width: 55%;
+  }
+}
+.footer__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 60px;
+}
+@media screen and (max-width: 767.98px) {
+  .footer__bottom {
+    flex-direction: column-reverse;
+    gap: 50px;
+  }
+}
+.footer__socials {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.footer__social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #fff;
+  filter: grayscale(40%);
+  transition: filter 0.3s;
+}
+.footer__social-link--facebook {
+  background: #4863a9;
+}
+.footer__social-link--youtube {
+  background: #ff0000;
+}
+.footer__social-link--linkedin {
+  background: #0e76a8;
+}
+.footer__social-link--twitter {
+  background: #1da1f2;
+}
+.footer__social-link--dribble {
+  background: #ea4c89;
+}
+.footer__social-link--discord {
+  background: #7289da;
+}
+.footer__social-link--tiktok {
+  background: #14171a;
+}
+.footer__social-link:hover {
+  filter: grayscale(0);
+}
+.footer__social-link:hover .footer__social-icon {
+  animation: spin linear 0.25s;
+}
+.footer__social-icon {
+  width: 16px;
+  height: 16px;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7462%) hue-rotate(41deg) brightness(111%) contrast(101%);
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 .logo {
   display: flex;
   align-items: center;
@@ -2084,6 +2281,9 @@ html.dark {
 }
 
 .product-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   padding: 16px;
   border-radius: 20px;
   background: var(--product-card-bg-color);
@@ -2133,6 +2333,7 @@ html.dark {
 .product-card__row {
   display: flex;
   align-items: center;
+  margin-top: auto;
 }
 .product-card__star {
   margin: 0 6px 0 auto;
