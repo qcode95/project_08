@@ -1,0 +1,22 @@
+@use "../abstracts";
+
+.message {
+    &--success {
+        background: #bfe9cf;
+    }
+}
+
+// ? Swal Library
+.swal-title {
+    font-size: 3em !important;
+}
+
+.swal-text {
+    font-size: 2em !important;
+}
+
+.swal-btn {
+    margin-top: 20px;
+    padding: 16px 24px;
+    border-radius: 8px !important;
+}

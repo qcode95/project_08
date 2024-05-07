@@ -2767,6 +2767,24 @@ html.dark {
   rotate: -45deg;
 }
 
+.message--success {
+  background: #bfe9cf;
+}
+
+.swal-title {
+  font-size: 3em !important;
+}
+
+.swal-text {
+  font-size: 2em !important;
+}
+
+.swal-btn {
+  margin-top: 20px;
+  padding: 16px 24px;
+  border-radius: 8px !important;
+}
+
 .home__container {
   margin-top: 40px;
 }
@@ -2835,6 +2853,7 @@ html.dark {
   bottom: 50px;
 }
 .auth__intro-img {
+  width: var(--width);
   max-width: 100%;
 }
 .auth__intro-text {
