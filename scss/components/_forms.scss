@@ -1,4 +1,13 @@
+@use "../abstracts";
+
+$error-color: #ff574a;
+
 .form {
+    &:has(:invalid) &__submit-btn {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+
     &__group {
         margin-top: 30px;
 
@@ -8,19 +17,32 @@
         }
     }
 
-    &__group:has(:invalid) &__text-input {
-        border-color: red;
-        background: rgba($color: red, $alpha: 0.1);
+    &__group:has(:invalid):has(&__input:not(:placeholder-shown)) {
+        .form__text-input {
+            border-color: $error-color;
+            background: rgba($color: $error-color, $alpha: 0.1);
+        }
+
+        .form__error,
+        .form__input-icon-error {
+            display: block;
+        }
+
+        .form__input-icon {
+            display: none;
+        }
     }
 
     &__error {
+        display: none;
+
         margin-top: 10px;
 
         text-align: left;
         font-size: 1.4rem;
         font-weight: 500;
 
-        color: red;
+        color: $error-color;
     }
 
     &__text-input {
@@ -34,6 +56,10 @@
 
         &:focus-within {
             border-color: #77dae6;
+        }
+
+        @include abstracts.screen(md) {
+            height: 48px;
         }
     }
 
@@ -50,10 +76,21 @@
             color: #d2d1d6;
         }
 
+        &-icon-error,
         &-icon {
             width: 20px;
-            height: 18px;
+            height: 20px;
             margin-left: 12px;
+        }
+
+        &-icon-error {
+            display: none;
+
+            animation: shake 0.4s;
+        }
+
+        @include abstracts.screen(md) {
+            font-size: 1.6rem;
         }
     }
 
@@ -62,16 +99,62 @@
     }
 
     &__checkbox {
+        position: relative;
+
         display: flex;
         align-items: center;
-        gap: 10px;
+
+        user-select: none;
 
         &-label {
+            margin-left: 29px;
+
             font-size: 1.5rem;
             font-weight: 500;
             line-height: 146.667%;
 
             color: #9e9da8;
+
+            cursor: pointer;
+
+            @include abstracts.screen(md) {
+                font-size: 1.4rem;
+            }
+        }
+
+        &::before,
+        &::after {
+            position: absolute;
+
+            content: "";
+
+            cursor: pointer;
+        }
+
+        &::before {
+            width: 19px;
+            height: 19px;
+            border-radius: 5px;
+            border: 1.5px solid #9e9da8;
+        }
+    }
+
+    &__checkbox:has(:checked) {
+        &::before {
+            border-color: #ffb700;
+            background: #ffb700;
+        }
+
+        &::after {
+            top: 5px;
+            left: 4px;
+
+            width: 12px;
+            height: 7px;
+            border: 2px solid;
+            border-color: transparent transparent #fff #fff;
+
+            rotate: -45deg;
         }
     }
 }

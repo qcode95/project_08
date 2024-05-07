@@ -1,0 +1,22 @@
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes shake {
+    0%,
+    100% {
+        translate: 0;
+    }
+    25%,
+    75% {
+        translate: 4px;
+    }
+    50% {
+        translate: -4px;
+    }
+}
