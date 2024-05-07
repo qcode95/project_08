@@ -3,6 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 10px;
 
     height: 46px;
     padding: 0 20px;
@@ -20,7 +21,9 @@
     transition-duration: 0.3s;
 
     + .btn {
-        margin-left: 20px;
+        &:not(.btn--no-margin) {
+            margin-left: 20px;
+        }
     }
 
     &--text {
@@ -57,14 +60,11 @@
         background: #ffb700;
     }
 
+    &--primary:hover,
     &--text:hover {
         outline: 1px solid #d2d1d6;
 
         background: transparent;
-    }
-
-    &--primary:hover {
-        opacity: 0.9;
     }
 }
 
