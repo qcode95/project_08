@@ -4,6 +4,8 @@
     margin-top: 60px;
     padding: 60px 0 30px 0;
 
+    font-size: 1.5rem;
+
     background: var(--footer-bg-color);
 
     &__row {
@@ -66,7 +68,6 @@
     &__text {
         padding: 8px 0;
 
-        font-size: 1.5rem;
         line-height: 1.5;
     }
 
@@ -122,7 +123,6 @@
         border: 2px solid #d2d1d6;
         border-radius: 99px;
 
-        font-size: 1.5rem;
         font-weight: 500;
 
         &:focus {
@@ -181,6 +181,11 @@
         filter: grayscale(40%);
         transition: filter 0.3s;
 
+        @include abstracts.screen(sm) {
+            width: 42px;
+            height: 42px;
+        }
+
         &--facebook {
             background: #4863a9;
         }
@@ -222,8 +227,13 @@
         width: 16px;
         height: 16px;
 
-        filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7462%) hue-rotate(41deg) brightness(111%)
-            contrast(101%);
+        filter: brightness(0) saturate(100%) invert(100%) sepia(0%)
+            saturate(7462%) hue-rotate(41deg) brightness(111%) contrast(101%);
+
+        @include abstracts.screen(sm) {
+            width: 18px;
+            height: 18px;
+        }
     }
 }
 
