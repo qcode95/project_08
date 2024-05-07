@@ -15,6 +15,10 @@ $error-color: #ff574a;
             display: flex;
             align-items: center;
         }
+
+        @include abstracts.screen(md) {
+            margin-top: 20px;
+        }
     }
 
     &__group:has(:invalid):has(&__input:not(:placeholder-shown)) {
@@ -73,7 +77,7 @@ $error-color: #ff574a;
         line-height: 144.444%;
 
         &::placeholder {
-            color: #d2d1d6;
+            color: var(--form-placeholder-color);
         }
 
         &-icon-error,

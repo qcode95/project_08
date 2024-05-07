@@ -1367,6 +1367,8 @@ html {
   --filter-form-shadow-color: rgba(200, 200, 200, 0.4);
   --filter-form-tag-bg-color: #f8f8fb;
   --auth-form-bg-color: #fff;
+  --form-placeholder-color: #d2d1d6;
+  --auth-form-btn-icon-color: var(--icon-color);
 }
 @media screen and (max-width: 991.98px) {
   html {
@@ -1377,6 +1379,11 @@ html {
 @media screen and (max-width: 767.98px) {
   html {
     --cate-item-bg-color: #fff;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  html {
+    --auth-intro-bg-color: #fff;
   }
 }
 
@@ -1411,6 +1418,14 @@ html.dark {
   --filter-form-shadow-color: rgba(0, 0, 0, 0.4);
   --filter-form-tag-bg-color: #171c28;
   --filter-form-arrow: var(--dropdown-arrow-color);
+  --auth-form-bg-color: #292e39;
+  --auth-intro-bg-color: #171c28;
+  --auth-heading-color: #b9babe;
+  --auth-intro-text-color: var(--auth-heading-color);
+  --form-placeholder-color: var(--auth-heading-color);
+  --auth-form-btn-text-color: var(--auth-heading-color);
+  --auth-form-btn-icon-color: brightness(0) saturate(100%) invert(82%) sepia(0%) saturate(4041%) hue-rotate(288deg)
+      brightness(93%) contrast(89%);
 }
 @media screen and (max-width: 991.98px) {
   html.dark {
@@ -2242,6 +2257,9 @@ html.dark {
 .btn + .btn:not(.btn--no-margin) {
   margin-left: 20px;
 }
+.btn__icon {
+  filter: var(--auth-form-btn-icon-color);
+}
 .btn--text {
   font-weight: 400;
   color: #9e9da8;
@@ -2638,6 +2656,11 @@ html.dark {
   display: flex;
   align-items: center;
 }
+@media screen and (max-width: 767.98px) {
+  .form__group {
+    margin-top: 20px;
+  }
+}
 .form__group:has(:invalid):has(.form__input:not(:placeholder-shown)) .form__text-input {
   border-color: #ff574a;
   background: rgba(255, 87, 74, 0.1);
@@ -2681,7 +2704,7 @@ html.dark {
   line-height: 144.444%;
 }
 .form__input::placeholder {
-  color: #d2d1d6;
+  color: var(--form-placeholder-color);
 }
 .form__input-icon-error, .form__input-icon {
   width: 20px;
@@ -2797,6 +2820,7 @@ html.dark {
   align-items: center;
   justify-content: center;
   gap: 50px;
+  background: var(--auth-intro-bg-color);
 }
 .auth__intro-logo, .auth__intro-next {
   position: absolute;
@@ -2819,6 +2843,7 @@ html.dark {
   font-size: 1.8rem;
   font-weight: 600;
   line-height: 144.444%;
+  color: var(--auth-intro-text-color);
 }
 @media screen and (max-width: 767.98px) {
   .auth__intro-text {
@@ -2844,6 +2869,11 @@ html.dark {
   }
 }
 @media screen and (max-width: 767.98px) {
+  .auth__content-inner {
+    padding: 32px 0;
+  }
+}
+@media screen and (max-width: 767.98px) {
   .auth__content {
     position: fixed;
     inset: 0;
@@ -2860,9 +2890,15 @@ html.dark {
   font-size: 3rem;
   font-weight: 500;
   line-height: 146.667%;
+  color: var(--auth-heading-color);
+}
+@media screen and (max-width: 767.98px) {
+  .auth__heading {
+    margin-top: 30px;
+  }
 }
 .auth__desc {
-  padding: 0 30px;
+  padding: 0 20px;
   margin-top: 10px;
   font-size: 1.5rem;
   font-weight: 500;
@@ -2901,8 +2937,22 @@ html.dark {
   gap: 30px;
   margin-top: 50px;
 }
+@media screen and (max-width: 767.98px) {
+  .auth__btn-group {
+    gap: 20px;
+  }
+}
 .auth__btn {
   width: 100%;
+}
+.auth__btn-outline {
+  color: var(--auth-form-btn-text-color);
+}
+.auth__btn-outline:hover {
+  color: initial;
+}
+.auth__btn-outline:hover .btn__icon {
+  filter: initial;
 }
 .auth__text {
   margin-top: 108px;
@@ -2912,6 +2962,7 @@ html.dark {
 }
 @media screen and (max-width: 767.98px) {
   .auth__text {
+    margin-top: 35px;
     font-size: 1.6rem;
   }
 }

@@ -25,6 +25,8 @@
         justify-content: center;
         gap: 50px;
 
+        background: var(--auth-intro-bg-color);
+
         &-logo,
         &-next {
             position: absolute;
@@ -54,6 +56,8 @@
             font-weight: 600;
             line-height: 144.444%;
 
+            color: var(--auth-intro-text-color);
+
             @include abstracts.screen(md) {
                 max-width: 315px;
 
@@ -81,6 +85,10 @@
                     margin-left: 0 !important;
                 }
             }
+
+            @include abstracts.screen(md) {
+                padding: 32px 0;
+            }
         }
 
         @include abstracts.screen(md) {
@@ -103,10 +111,16 @@
         font-size: 3rem;
         font-weight: 500;
         line-height: 146.667%;
+
+        color: var(--auth-heading-color);
+
+        @include abstracts.screen(md) {
+            margin-top: 30px;
+        }
     }
 
     &__desc {
-        padding: 0 30px;
+        padding: 0 20px;
         margin-top: 10px;
 
         font-size: 1.5rem;
@@ -148,10 +162,26 @@
         gap: 30px;
 
         margin-top: 50px;
+
+        @include abstracts.screen(md) {
+            gap: 20px;
+        }
     }
 
     &__btn {
         width: 100%;
+
+        &-outline {
+            color: var(--auth-form-btn-text-color);
+
+            &:hover {
+                color: initial;
+            }
+
+            &:hover .btn__icon {
+                filter: initial;
+            }
+        }
     }
 
     &__text {
@@ -163,6 +193,8 @@
         color: #9e9da8;
 
         @include abstracts.screen(md) {
+            margin-top: 35px;
+
             font-size: 1.6rem;
         }
 

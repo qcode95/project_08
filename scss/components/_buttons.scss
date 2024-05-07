@@ -26,6 +26,10 @@
         }
     }
 
+    &__icon {
+        filter: var(--auth-form-btn-icon-color);
+    }
+
     &--text {
         font-weight: 400;
 

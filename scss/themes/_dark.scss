@@ -51,4 +51,14 @@ html.dark {
     --filter-form-shadow-color: rgba(0, 0, 0, 0.4);
     --filter-form-tag-bg-color: #171c28;
     --filter-form-arrow: var(--dropdown-arrow-color);
+
+    // ? Light theme auth form
+    --auth-form-bg-color: #292e39;
+    --auth-intro-bg-color: #171c28;
+    --auth-heading-color: #b9babe;
+    --auth-intro-text-color: var(--auth-heading-color);
+    --form-placeholder-color: var(--auth-heading-color);
+    --auth-form-btn-text-color: var(--auth-heading-color);
+    --auth-form-btn-icon-color: brightness(0) saturate(100%) invert(82%) sepia(0%) saturate(4041%) hue-rotate(288deg)
+        brightness(93%) contrast(89%);
 }
