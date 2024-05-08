@@ -20,6 +20,11 @@ html {
         --header-shadow-color: rgba(237, 237, 246, 0.2);
     }
 
+    // ? Light theme action header dropdown color
+    --header-act-dropdown-bg-color: #fff;
+    --header-act-dropdown-shadow-color: rgba(200, 200, 200, 0.4);
+    --header-act-dropdown-border-color: #d2d1d6;
+
     // ? Light theme dropdown color
     --dropdown-bg-color: #fff;
     --dropdown-shadow-color: rgba(200, 200, 200, 0.4);
