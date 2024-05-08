@@ -52,14 +52,37 @@ html {
     // ? Light theme filter form
     --filter-form-bg-color: #fff;
     --filter-form-shadow-color: rgba(200, 200, 200, 0.4);
-    --filter-form-tag-bg-color: #f8f8fb;
 
     // ? Light theme auth form
-    --auth-form-bg-color: #fff;
     --form-placeholder-color: #d2d1d6;
+    --form-tag-bg-color: #ebe8e8;
+    --auth-form-bg-color: #fff;
     --auth-form-btn-icon-color: var(--icon-color);
 
     @include abstracts.screen(md) {
         --auth-intro-bg-color: #fff;
     }
+
+    // ? Light theme product-detail page
+    --product-detail-bg-color: #fff;
+    --product-info-bg-color: #f6f6f6;
+    --product-detail-info-content-bg: transparent;
+    --product-info-form-tag-bg-color: #ededf6;
+
+    --breadcrumbs-bg-color: #f6f6f6;
+    --breadcrumbs-shadow-color: rgba(237, 237, 246, 0.2);
+
+    @include abstracts.screen(md) {
+        --product-detail-bg-color: #fafafd;
+        --product-detail-info-content-bg: #fff;
+        --product-info-bg-color: transparent;
+        --breadcrumbs-bg-color: #fff;
+    }
+
+    // ? Light theme search bar
+    --search-bar-bg-color: #fff;
+    --search-bar-placeholder-color: #9e9da8;
+
+    // ? Light theme review card
+    --review-card-bg-color: #fafafd;
 }

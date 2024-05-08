@@ -47,12 +47,12 @@ html.dark {
     --product-card-shadow-color: rgba(0, 0, 0, 0.2);
 
     // ? Dark theme filter form
+    --form-tag-bg-color: #171c28;
     --filter-form-bg-color: #373d4c;
     --filter-form-shadow-color: rgba(0, 0, 0, 0.4);
-    --filter-form-tag-bg-color: #171c28;
     --filter-form-arrow: var(--dropdown-arrow-color);
 
-    // ? Light theme auth form
+    // ? Dark theme auth form
     --auth-form-bg-color: #292e39;
     --auth-intro-bg-color: #171c28;
     --auth-heading-color: #b9babe;
@@ -61,4 +61,24 @@ html.dark {
     --auth-form-btn-text-color: var(--auth-heading-color);
     --auth-form-btn-icon-color: brightness(0) saturate(100%) invert(82%) sepia(0%) saturate(4041%) hue-rotate(288deg)
         brightness(93%) contrast(89%);
+
+    // ? Dark theme product-detail page
+    --product-detail-bg-color: #292e39;
+    --product-info-bg-color: #171c28;
+    --product-detail-info-content-bg: transparent;
+    --product-info-form-tag-bg-color: var(--product-detail-bg-color);
+
+    --breadcrumbs-bg-color: #171c28;
+    --breadcrumbs-shadow-color: rgba(23, 28, 40, 0.2);
+
+    @include abstracts.screen(md) {
+        --product-info-bg-color: transparent;
+        --product-detail-info-content-bg: #171c28;
+    }
+
+    // ? Dark theme search bar
+    --search-bar-bg-color: #171c28;
+    --search-bar-placeholder-color: #b9babe;
+    --search-bar-icon-color: brightness(0) saturate(100%) invert(79%) sepia(0%) saturate(851%) hue-rotate(23deg)
+        brightness(97%) contrast(86%);
 }
