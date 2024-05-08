@@ -9,6 +9,10 @@
     box-sizing: border-box;
 }
 
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
 html {
     font-size: 62.5%;
 }
@@ -48,7 +52,16 @@ select {
     outline: none;
     font-family: inherit;
     color: inherit;
-    -webkit-tap-highlight-color: transparent;
+}
+
+i,
+em {
+    font-style: italic;
+}
+
+b,
+strong {
+    font-weight: 600;
 }
 
 input {

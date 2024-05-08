@@ -81,4 +81,10 @@ html.dark {
     --search-bar-placeholder-color: #b9babe;
     --search-bar-icon-color: brightness(0) saturate(100%) invert(79%) sepia(0%) saturate(851%) hue-rotate(23deg)
         brightness(97%) contrast(86%);
+
+    // ? Dark theme text-content
+    --text-content-hr-bg-color: #868585;
+
+    // ? Dark theme review card
+    --review-card-bg-color: #171c28;
 }

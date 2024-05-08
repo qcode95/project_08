@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="">
+<html lang="en" class="dark">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -237,26 +237,54 @@
 
                 <!-- ? Product Content -->
                 <div class="product-container">
-                    <div class="product-tab">
+                    <div class="product-tab js-tabs">
                         <!-- ? Tab List -->
                         <ul class="product-tab__list">
-                            <li class="product-tab__item">Description</li>
-                            <li class="product-tab__item">Features</li>
+                            <li class="product-tab__item product-tab__item--current">Description</li>
                             <li class="product-tab__item">Review (1100)</li>
-                            <li class="product-tab__item product-tab__item--current">Similar</li>
+                            <li class="product-tab__item">Similar</li>
                         </ul>
 
                         <!-- ? Tab Content -->
                         <div class="product-tab__contents">
                             <!-- ? Description -->
-                            <div class="product-tab__content">Description</div>
-                            <!-- ? Features -->
-                            <div class="product-tab__content">Features</div>
-                            <!-- ? Review -->
                             <div class="product-tab__content product-tab__content--current">
+                                <div class="row">
+                                    <!-- ? Content -->
+                                    <div class="col-8 col-xl-10 col-lg-12">
+                                        <div class="text-content product-tab__text-content">
+                                            <h2>Lorem ipsum dolor sit, amet consectetur.</h2>
+                                            <p>
+                                                Lorem ipsum <a href="#!">dolor sit</a> amet consectetur adipisicing
+                                                elit. Necessitatibus nemo est, debitis vel aperiam aspernatur aliquid
+                                                harum voluptatum magnam hic, perferendis similique voluptates.
+                                                Perferendis quo est illum quam officia consectetur!
+                                            </p>
+                                            <p>
+                                                <img src="./assets/images/product/product-1.png" alt="" />
+                                                <em>Lorem ipsum dolor sit amet consectetur</em>
+                                            </p>
+                                            <hr />
+                                            <h3>Lorem ipsum dolor sit</h3>
+                                            <blockquote>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                    Necessitatibus nemo est, debitis vel aperiam aspernatur aliquid
+                                                    harum voluptatum magnam hic, perferendis similique voluptates.
+                                                    Perferendis quo est illum quam officia consectetur!
+                                                </p>
+                                            </blockquote>
+                                        </div>
+                                    </div>
+                                    <!-- ? Banner -->
+                                    <!-- <div class="col-4"></div> -->
+                                </div>
+                            </div>
+                            <!-- ? Review -->
+                            <div class="product-tab__content">
                                 <div class="product-content">
                                     <h2 class="product-content__heading">What our customers are saying</h2>
-                                    <div class="row row-cols-3">
+                                    <div class="row row-cols-3 row-cols-md-1 gx-lg-2 gx-md-0 gy-md-3">
                                         <!-- ? Review Card 1 -->
                                         <div class="col">
                                             <div class="review-card">
@@ -274,77 +302,81 @@
                                                     </div>
                                                 </div>
                                                 <div class="review-card__rating">
-                                                    <img
-                                                        src="./assets/icons/star.svg"
-                                                        alt=""
-                                                        class="review-card__star"
-                                                    />
-                                                    <img
-                                                        src="./assets/icons/star.svg"
-                                                        alt=""
-                                                        class="review-card__star"
-                                                    />
-                                                    <img
-                                                        src="./assets/icons/star.svg"
-                                                        alt=""
-                                                        class="review-card__star"
-                                                    />
-                                                    <img
-                                                        src="./assets/icons/star-half.svg"
-                                                        alt=""
-                                                        class="review-card__star"
-                                                    />
-                                                    <img
-                                                        src="./assets/icons/star-empty.svg"
-                                                        alt=""
-                                                        class="review-card__star"
-                                                    />
+                                                    <div class="review-card__star-list">
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                            class="review-card__star"
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                            class="review-card__star"
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                            class="review-card__star"
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star-half.svg"
+                                                            alt=""
+                                                            class="review-card__star"
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star-empty.svg"
+                                                            alt=""
+                                                            class="review-card__star"
+                                                        />
+                                                    </div>
                                                     <span class="review-card__rating-title">(3.5) Review</span>
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- ? Review Card 1 -->
+                                        <!-- ? Review Card 2 -->
                                         <div class="col">
                                             <div class="review-card">
                                                 <div class="review-card__content">
                                                     <img
-                                                        src="./assets/images/avatars/avt-1.png"
-                                                        alt="Jakir Hussen"
+                                                        src="./assets/images/avatars/avt-2.png"
+                                                        alt="Jubed Ahmed"
                                                         class="review-card__avt"
                                                     />
                                                     <div class="review-card__info">
-                                                        <h4 class="review-card__title">Jakir Hussen</h4>
+                                                        <h4 class="review-card__title">Jubed Ahmed</h4>
                                                         <p class="review-card__desc">
-                                                            Great product, I love this Coffee Beans
+                                                            Awesome Coffee, I love this Coffee Beans
                                                         </p>
                                                     </div>
                                                 </div>
                                                 <div class="review-card__rating">
-                                                    <img
-                                                        src="./assets/icons/star.svg"
-                                                        alt=""
-                                                        class="review-card__star"
-                                                    />
-                                                    <img
-                                                        src="./assets/icons/star.svg"
-                                                        alt=""
-                                                        class="review-card__star"
-                                                    />
-                                                    <img
-                                                        src="./assets/icons/star.svg"
-                                                        alt=""
-                                                        class="review-card__star"
-                                                    />
-                                                    <img
-                                                        src="./assets/icons/star-half.svg"
-                                                        alt=""
-                                                        class="review-card__star"
-                                                    />
-                                                    <img
-                                                        src="./assets/icons/star-empty.svg"
-                                                        alt=""
-                                                        class="review-card__star"
-                                                    />
+                                                    <div class="review-card__star-list">
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                            class="review-card__star"
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                            class="review-card__star"
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                            class="review-card__star"
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star-half.svg"
+                                                            alt=""
+                                                            class="review-card__star"
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star-empty.svg"
+                                                            alt=""
+                                                            class="review-card__star"
+                                                        />
+                                                    </div>
                                                     <span class="review-card__rating-title">(3.5) Review</span>
                                                 </div>
                                             </div>
@@ -354,43 +386,45 @@
                                             <div class="review-card">
                                                 <div class="review-card__content">
                                                     <img
-                                                        src="./assets/images/avatars/avt-1.png"
-                                                        alt="Jakir Hussen"
+                                                        src="./assets/images/avatars/avt-3.png"
+                                                        alt="Delwar Hussain"
                                                         class="review-card__avt"
                                                     />
                                                     <div class="review-card__info">
-                                                        <h4 class="review-card__title">Jakir Hussen</h4>
+                                                        <h4 class="review-card__title">Delwar Hussain</h4>
                                                         <p class="review-card__desc">
-                                                            Great product, I love this Coffee Beans
+                                                            Great product, I like this Coffee Beans
                                                         </p>
                                                     </div>
                                                 </div>
                                                 <div class="review-card__rating">
-                                                    <img
-                                                        src="./assets/icons/star.svg"
-                                                        alt=""
-                                                        class="review-card__star"
-                                                    />
-                                                    <img
-                                                        src="./assets/icons/star.svg"
-                                                        alt=""
-                                                        class="review-card__star"
-                                                    />
-                                                    <img
-                                                        src="./assets/icons/star.svg"
-                                                        alt=""
-                                                        class="review-card__star"
-                                                    />
-                                                    <img
-                                                        src="./assets/icons/star-half.svg"
-                                                        alt=""
-                                                        class="review-card__star"
-                                                    />
-                                                    <img
-                                                        src="./assets/icons/star-empty.svg"
-                                                        alt=""
-                                                        class="review-card__star"
-                                                    />
+                                                    <div class="review-card__star-list">
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                            class="review-card__star"
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                            class="review-card__star"
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                            class="review-card__star"
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star-half.svg"
+                                                            alt=""
+                                                            class="review-card__star"
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star-empty.svg"
+                                                            alt=""
+                                                            class="review-card__star"
+                                                        />
+                                                    </div>
                                                     <span class="review-card__rating-title">(3.5) Review</span>
                                                 </div>
                                             </div>
@@ -403,7 +437,7 @@
                                 <div class="product-content">
                                     <h2 class="product-content__heading">Similar items you might like</h2>
                                     <div
-                                        class="row row-cols-6 row-cols-xl-4 row-cols-lg-3 row-cols-md-2 row-cols-sm-1 g-3"
+                                        class="row row-cols-6 row-cols-xl-4 row-cols-lg-3 row-cols-md-2 row-cols-sm-1 g-2 g-md-0 gy-md-3"
                                     >
                                         <!-- ? Product Item 1 -->
                                         <div class="col">

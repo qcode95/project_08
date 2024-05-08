@@ -83,6 +83,13 @@ html {
     --search-bar-bg-color: #fff;
     --search-bar-placeholder-color: #9e9da8;
 
+    // ? Light theme text-content
+    --text-content-hr-bg-color: #ebebeb;
+
     // ? Light theme review card
     --review-card-bg-color: #fafafd;
+
+    @include abstracts.screen(md) {
+        --review-card-bg-color: #fff;
+    }
 }
