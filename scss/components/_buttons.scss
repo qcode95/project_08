@@ -16,9 +16,15 @@
 
     cursor: pointer;
     user-select: none;
+    white-space: nowrap;
 
     transition: opacity, outline-width, background;
     transition-duration: 0.3s;
+
+    &--small {
+        height: 40px;
+        padding: 0 16px;
+    }
 
     + .btn {
         &:not(.btn--no-margin) {
@@ -33,7 +39,7 @@
     &--text {
         font-weight: 400;
 
-        color: #9e9da8;
+        color: var(--text-color);
         background: transparent;
     }
 
