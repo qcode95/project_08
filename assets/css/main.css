@@ -3792,6 +3792,22 @@ html.dark {
     padding: 16px;
   }
 }
+.cart-info__heading {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 141.667%;
+}
+@media screen and (max-width: 767.98px) {
+  .cart-info__heading {
+    font-size: 1.6rem;
+  }
+}
+.cart-info__sub-heading {
+  margin: 30px 0;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 144.444%;
+}
 .cart-info__list {
   margin-top: -30px;
 }
@@ -3955,6 +3971,9 @@ html.dark {
   line-height: 146.667%;
   cursor: pointer;
 }
+.cart-item__input-btn {
+  display: flex;
+}
 .cart-item__icon {
   cursor: pointer;
 }
@@ -4017,6 +4036,134 @@ html.dark {
   margin-top: 10px;
   font-size: 1.4rem;
   line-height: 142.857%;
+}
+
+.user-address__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media screen and (max-width: 767.98px) {
+  .user-address__top {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px 0;
+  }
+}
+.user-address__title {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 144.444%;
+}
+@media screen and (max-width: 767.98px) {
+  .user-address__title {
+    font-size: 1.6rem;
+  }
+}
+.user-address__desc {
+  margin-top: 4px;
+  font-size: 1.5rem;
+  line-height: 146.667%;
+}
+@media screen and (max-width: 767.98px) {
+  .user-address__desc {
+    font-size: 1.4rem;
+  }
+}
+.user-address__message {
+  margin-top: 30px;
+  font-weight: 500;
+}
+.user-address__link {
+  color: #0071dc;
+}
+
+.address-card {
+  display: flex;
+  margin-top: 30px;
+}
+@media screen and (max-width: 767.98px) {
+  .address-card {
+    flex-direction: column;
+  }
+}
+.address-card__left {
+  display: flex;
+  flex: 1;
+  gap: 16px;
+}
+.address-card__title {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 144.444%;
+}
+@media screen and (max-width: 767.98px) {
+  .address-card__title {
+    font-size: 1.6rem;
+  }
+}
+.address-card__desc {
+  width: min(520px, 100%);
+  margin-top: 4px;
+  font-size: 1.5rem;
+  line-height: 146.667%;
+}
+@media screen and (max-width: 767.98px) {
+  .address-card__desc {
+    font-size: 1.4rem;
+  }
+}
+.address-card__list {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding-left: 8px;
+  margin-top: 20px;
+  font-size: 1.4rem;
+  line-height: 142.857%;
+  list-style: disc inside;
+}
+@media screen and (max-width: 767.98px) {
+  .address-card__list {
+    gap: 16px;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  .address-card__list {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+.address-card__ctrl {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+@media screen and (max-width: 767.98px) {
+  .address-card__ctrl {
+    margin-top: 16px;
+  }
+}
+.address-card__ctrl-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.8rem;
+  line-height: 144.444%;
+  cursor: pointer;
+}
+.address-card__checkbox-input {
+  appearance: none;
+}
+.address-card__checkbox-input::before {
+  content: url("../icons/checkbox-uncheck.svg");
+}
+.address-card__checkbox-input:not(:checked)::before {
+  filter: var(--icon-color);
+}
+.address-card__checkbox-input:checked::before {
+  content: url("../icons/checkbox-checked.svg");
 }
 
 /*# sourceMappingURL=main.css.map */
