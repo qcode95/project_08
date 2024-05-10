@@ -159,7 +159,7 @@ $error-color: #ff574a;
         }
 
         &-heading {
-            padding: 16px;
+            padding: 20px;
 
             font-size: 1.8rem;
             font-weight: 600;
@@ -172,7 +172,7 @@ $error-color: #ff574a;
         top: 0;
         right: 0;
 
-        padding: 3px 20px;
+        padding: 12px 20px;
 
         font-size: 3rem;
     }
@@ -202,17 +202,21 @@ $error-color: #ff574a;
         &-icon {
             width: 16px;
             margin-left: 10px;
+
+            @include abstracts.screen(sm) {
+                width: 20px;
+            }
         }
 
         @include abstracts.screen(lg) {
-            height: 42px;
+            height: 48px;
         }
 
         @include abstracts.screen(sm) {
             padding: 0 14px;
             border: 1px solid #d2d1d6;
             border-radius: 12px;
-            margin: 10px 20px 0;
+            margin: 10px 30px 0;
         }
     }
 
@@ -223,6 +227,10 @@ $error-color: #ff574a;
 
         overflow-y: auto;
         overscroll-behavior: contain;
+
+        @supports (-webkit-touch-callout: none) {
+            padding-bottom: 300px;
+        }
     }
 
     &__option {
@@ -246,6 +254,12 @@ $error-color: #ff574a;
 
         @include abstracts.screen(lg) {
             padding: 14px 20px;
+        }
+
+        @include abstracts.screen(sm) {
+            padding: 18px 35px;
+
+            font-size: 1.6rem;
         }
     }
 

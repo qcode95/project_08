@@ -8,6 +8,9 @@
 
 // ? Main Classes
 .header {
+    position: relative;
+    z-index: 3;
+
     background: var(--header-bg-color);
 
     @include abstracts.screen(lg) {
