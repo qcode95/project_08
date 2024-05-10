@@ -74,7 +74,7 @@ $error-color: #ff574a;
 
         padding: 0 12px;
         border-radius: 10px;
-        border: 1.5px solid #d2d1d6;
+        border: 1px solid #d2d1d6;
 
         &:focus-within {
             border-color: #77dae6;
@@ -108,6 +108,10 @@ $error-color: #ff574a;
         &--small {
             height: 42px;
             border-radius: 8px;
+        }
+
+        &--no-border {
+            border: none;
         }
 
         @include abstracts.screen(md) {
@@ -339,7 +343,7 @@ $error-color: #ff574a;
             width: 19px;
             height: 19px;
             border-radius: 5px;
-            border: 1.5px solid #9e9da8;
+            border: 1px solid #9e9da8;
         }
     }
 

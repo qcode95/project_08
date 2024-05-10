@@ -375,7 +375,7 @@
 
     &__bottom {
         padding: 20px 0;
-        border-width: 1.5px 0;
+        border-width: 1px 0;
         border-color: var(--header-act-dropdown-border-color);
         border-style: solid;
         margin: 20px 0;
@@ -428,7 +428,7 @@
         position: relative;
 
         padding-top: 100%;
-        border: 1.5px solid var(--header-act-dropdown-border-color);
+        border: 1px solid var(--header-act-dropdown-border-color);
         border-radius: 10px;
     }
 

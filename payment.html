@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="">
+<html lang="en" class="dark">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -130,54 +130,58 @@
                                 <!-- ? Shipping List -->
                                 <div class="payment-list">
                                     <!-- ? Payment Item 1 -->
-                                    <article class="payment-item">
-                                        <img
-                                            src="./assets/images/payment/delivery-1.png"
-                                            alt="Fedex Delivery"
-                                            class="payment-item__thumb"
-                                        />
-                                        <div class="payment-item__content">
-                                            <h3 class="payment-item__title">Fedex Delivery</h3>
-                                            <p class="payment-item__desc payment-item__desc--low">
-                                                Delivery: 2-3 days work
-                                            </p>
-                                        </div>
-                                        <div class="payment-item__cost-wrap">
-                                            <span class="payment-item__cost">Free</span>
-                                            <label class="cart-info__checkbox">
-                                                <input
-                                                    type="radio"
-                                                    name="checkbox-input"
-                                                    class="cart-info__checkbox-input"
-                                                    checked
-                                                />
-                                            </label>
-                                        </div>
-                                    </article>
+                                    <label>
+                                        <article class="payment-item payment-item--pointer">
+                                            <img
+                                                src="./assets/images/payment/delivery-1.png"
+                                                alt="Fedex Delivery"
+                                                class="payment-item__thumb"
+                                            />
+                                            <div class="payment-item__body">
+                                                <div class="payment-item__content">
+                                                    <h3 class="payment-item__title">Fedex Delivery</h3>
+                                                    <p class="payment-item__desc payment-item__desc--low">
+                                                        Delivery: 2-3 days work
+                                                    </p>
+                                                </div>
+                                                <span class="cart-info__checkbox payment-item__checkbox">
+                                                    <input
+                                                        type="radio"
+                                                        name="checkbox-input"
+                                                        class="cart-info__checkbox-input payment-item__checkbox-input"
+                                                        checked
+                                                    />
+                                                    <span class="payment-item__cost">Free</span>
+                                                </span>
+                                            </div>
+                                        </article>
+                                    </label>
                                     <!-- ? Payment Item 2 -->
-                                    <article class="payment-item">
-                                        <img
-                                            src="./assets/images/payment/delivery-2.png"
-                                            alt=""
-                                            class="payment-item__thumb"
-                                        />
-                                        <div class="payment-item__content">
-                                            <h3 class="payment-item__title">DHL Delivery</h3>
-                                            <p class="payment-item__desc payment-item__desc--low">
-                                                Delivery: 2-3 days work
-                                            </p>
-                                        </div>
-                                        <div class="payment-item__cost-wrap">
-                                            <span class="payment-item__cost">$120</span>
-                                            <label class="cart-info__checkbox">
-                                                <input
-                                                    type="radio"
-                                                    name="checkbox-input"
-                                                    class="cart-info__checkbox-input"
-                                                />
-                                            </label>
-                                        </div>
-                                    </article>
+                                    <label>
+                                        <article class="payment-item payment-item--pointer">
+                                            <img
+                                                src="./assets/images/payment/delivery-2.png"
+                                                alt=""
+                                                class="payment-item__thumb"
+                                            />
+                                            <div class="payment-item__body">
+                                                <div class="payment-item__content">
+                                                    <h3 class="payment-item__title">DHL Delivery</h3>
+                                                    <p class="payment-item__desc payment-item__desc--low">
+                                                        Delivery: 2-3 days work
+                                                    </p>
+                                                </div>
+                                                <span class="cart-info__checkbox payment-item__checkbox">
+                                                    <input
+                                                        type="radio"
+                                                        name="checkbox-input"
+                                                        class="cart-info__checkbox-input payment-item__checkbox-input"
+                                                    />
+                                                    <span class="payment-item__cost">$120</span>
+                                                </span>
+                                            </div>
+                                        </article>
+                                    </label>
                                 </div>
                             </div>
                         </div>
@@ -186,31 +190,146 @@
                             <div class="cart-info">
                                 <!-- ? Cart Info Heading -->
                                 <h2 class="cart-info__heading cart-info__heading--lv2">Payment Details</h2>
+                                <p class="cart-info__desc">
+                                    Complete your purchase item by providing your payment details order.
+                                </p>
 
-                                <div class="cart-info__row">
-                                    <span>Subtotal <span class="cart-info__sub-label">(items)</span></span>
-                                    <span class="cart-info__value-bold">3</span>
+                                <!-- ? Cart-info Form -->
+                                <form action="" class="form cart-info__form">
+                                    <div class="form__group">
+                                        <label for="email" class="form__label cart-info__form-label"
+                                            >Email Address</label
+                                        >
+                                        <div class="form__text-input">
+                                            <input
+                                                type="email"
+                                                name=""
+                                                id="email"
+                                                class="form__input"
+                                                placeholder="Email"
+                                                required
+                                            />
+                                            <img
+                                                src="./assets/icons/form-error.svg"
+                                                alt=""
+                                                class="form__input-icon-error"
+                                            />
+                                        </div>
+                                        <p class="form__error">Enter an email here!</p>
+                                    </div>
+                                    <div class="form__group">
+                                        <label for="card-holder" class="form__label cart-info__form-label">
+                                            Card Holder
+                                        </label>
+                                        <div class="form__text-input">
+                                            <input
+                                                type="text"
+                                                name=""
+                                                id="card-holder"
+                                                class="form__input"
+                                                placeholder="Card Holder"
+                                                minlength="2"
+                                                required
+                                            />
+                                            <img
+                                                src="./assets/icons/form-error.svg"
+                                                alt=""
+                                                class="form__input-icon-error"
+                                            />
+                                        </div>
+                                        <p class="form__error">Enter a name here!</p>
+                                    </div>
+                                    <div class="form__group">
+                                        <label for="card-number" class="form__label cart-info__form-label">
+                                            Card Number
+                                        </label>
+                                        <div class="form__text-input">
+                                            <input
+                                                type="text"
+                                                name=""
+                                                id="card-number"
+                                                class="form__input"
+                                                placeholder="Card Number"
+                                                required
+                                            />
+                                            <img
+                                                src="./assets/icons/form-error.svg"
+                                                alt=""
+                                                class="form__input-icon-error"
+                                            />
+                                        </div>
+                                        <p class="form__error">Enter a card number here!</p>
+                                    </div>
+                                    <div class="form__row cart-info__form-row">
+                                        <div class="form__group cart-info__form-group">
+                                            <div class="form__text-input form__text-input--no-border">
+                                                <input
+                                                    type="text"
+                                                    name=""
+                                                    id="card-expired"
+                                                    class="form__input"
+                                                    placeholder="MM/YY"
+                                                    required
+                                                />
+                                                <img
+                                                    src="./assets/icons/form-error.svg"
+                                                    alt=""
+                                                    class="form__input-icon-error"
+                                                />
+                                            </div>
+                                            <p class="form__error">Enter an email here!</p>
+                                        </div>
+                                        <!-- ? Separate -->
+                                        <div class="cart-info__form-input-separate"></div>
+
+                                        <div class="form__group cart-info__form-group">
+                                            <div class="form__text-input form__text-input--no-border">
+                                                <input
+                                                    type="text"
+                                                    name=""
+                                                    id="card-cvc"
+                                                    class="form__input"
+                                                    placeholder="CVC"
+                                                    required
+                                                />
+                                                <img
+                                                    src="./assets/icons/form-error.svg"
+                                                    alt=""
+                                                    class="form__input-icon-error"
+                                                />
+                                            </div>
+                                            <p class="form__error">Enter an email here!</p>
+                                        </div>
+                                    </div>
+                                </form>
+
+                                <!-- ? Cart-info Total Price -->
+                                <div class="cart-info__final-pay">
+                                    <div class="cart-info__row">
+                                        <span>Subtotal <span class="cart-info__sub-label">(items)</span></span>
+                                        <span class="cart-info__value-bold">3</span>
+                                    </div>
+
+                                    <div class="cart-info__row">
+                                        <span>Price <span class="cart-info__sub-label">(Total)</span></span>
+                                        <span class="cart-info__value-bold">$191.65</span>
+                                    </div>
+
+                                    <div class="cart-info__row">
+                                        <span>Shipping</span>
+                                        <span class="cart-info__value-bold">$10.00</span>
+                                    </div>
+
+                                    <div class="cart-info__separate"></div>
+
+                                    <div class="cart-info__row">
+                                        <span>Estimated Total</span>
+                                        <span class="cart-info__value-bold">$201.65</span>
+                                    </div>
+                                    <a href="./shipping.html" class="btn btn--primary cart-info__next-btn">
+                                        Pay $465.98
+                                    </a>
                                 </div>
-
-                                <div class="cart-info__row">
-                                    <span>Price <span class="cart-info__sub-label">(Total)</span></span>
-                                    <span class="cart-info__value-bold">$191.65</span>
-                                </div>
-
-                                <div class="cart-info__row">
-                                    <span>Shipping</span>
-                                    <span class="cart-info__value-bold">$10.00</span>
-                                </div>
-
-                                <div class="cart-info__separate"></div>
-
-                                <div class="cart-info__row">
-                                    <span>Estimated Total</span>
-                                    <span class="cart-info__value-bold">$201.65</span>
-                                </div>
-                                <a href="./shipping.html" class="btn btn--primary btn--rounded cart-info__next-btn">
-                                    Continue to checkout
-                                </a>
                             </div>
                         </div>
                     </div>
@@ -246,7 +365,11 @@
                     <div class="modal__body">
                         <div class="form__row">
                             <div class="form__group">
-                                <label for="name" class="form__label form__label--small">Name</label>
+                                <label
+                                    for="name"
+                                    class="form__label cart-info__form-label form__label cart-info__form-label--small"
+                                    >Name</label
+                                >
                                 <div class="form__text-input form__text-input--small">
                                     <input
                                         type="text"
@@ -262,7 +385,11 @@
                                 <p class="form__error">Name must be at least 2 characters!</p>
                             </div>
                             <div class="form__group">
-                                <label for="phone" class="form__label form__label--small">Phone</label>
+                                <label
+                                    for="phone"
+                                    class="form__label cart-info__form-label form__label cart-info__form-label--small"
+                                    >Phone</label
+                                >
                                 <div class="form__text-input form__text-input--small">
                                     <input
                                         type="tel"
@@ -280,7 +407,11 @@
                             </div>
                         </div>
                         <div class="form__group">
-                            <label for="address" class="form__label form__label--small">Address</label>
+                            <label
+                                for="address"
+                                class="form__label cart-info__form-label form__label cart-info__form-label--small"
+                                >Address</label
+                            >
                             <div class="form__text-area form__text-area--small">
                                 <textarea
                                     name="address"
@@ -294,7 +425,11 @@
                             <p class="form__error">Address must be not empty!</p>
                         </div>
                         <div class="form__group">
-                            <label for="city" class="form__label form__label--small">City/District/Ward</label>
+                            <label
+                                for="city"
+                                class="form__label cart-info__form-label form__label cart-info__form-label--small"
+                                >City/District/Ward</label
+                            >
                             <div
                                 class="form__text-input form__text-input--small js-toggle"
                                 toggle-target="#city-dialog"
