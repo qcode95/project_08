@@ -58,6 +58,11 @@
         border-radius: 99px;
     }
 
+    &--danger {
+        color: #fff;
+        background: #ff574a;
+    }
+
     &[disable],
     &--disabled {
         opacity: 0.5;
