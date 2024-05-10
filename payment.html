@@ -85,29 +85,107 @@
                             <!-- ? Cart Info 1 -->
                             <div class="cart-info">
                                 <!-- ? Cart Info Heading -->
-                                <h2 class="cart-info__sub-heading">
-                                    1. Shipping, arrives between Mon, May 16—Tue, May 24
-                                </h2>
+                                <div class="cart-info__top">
+                                    <h2 class="cart-info__heading cart-info__heading--lv2">
+                                        1. Shipping, arrives between Mon, May 16—Tue, May 24
+                                    </h2>
+                                    <a href="./shipping.html" class="cart-info__edit-btn">
+                                        <img src="./assets/icons/edit.svg" alt="" class="icon" />
+                                        Edit
+                                    </a>
+                                </div>
 
-                                <!-- ? User Address -->
+                                <!-- ? Payment List -->
+                                <div class="payment-list">
+                                    <!-- ? Payment Item 1 -->
+                                    <article class="payment-item">
+                                        <div class="payment-item__content">
+                                            <h3 class="payment-item__title">Imran Khan</h3>
+                                            <p class="payment-item__desc">
+                                                Museum of Rajas, Sylhet Sadar, Sylhet 3100.
+                                            </p>
+                                        </div>
+                                    </article>
+                                    <!-- ? Payment Item 2 -->
+                                    <article class="payment-item">
+                                        <div class="payment-item__content">
+                                            <h3 class="payment-item__title">Items details</h3>
+                                            <p class="payment-item__desc">3 items</p>
+                                        </div>
+                                        <a href="./shipping.html" class="payment-item__link">View Details</a>
+                                    </article>
+                                </div>
                             </div>
 
                             <!-- ? Cart Info 2 -->
                             <div class="cart-info">
                                 <!-- ? Cart Info Heading -->
-                                <h2 class="cart-info__sub-heading">2. Shipping method</h2>
+                                <h2 class="cart-info__heading cart-info__heading--lv2">2. Shipping method</h2>
 
                                 <!-- ? Separate -->
                                 <div class="cart-info__separate"></div>
 
-                                <!-- ? User Address -->
+                                <!-- ? Shipping Method -->
+                                <h3 class="cart-info__sub-heading">Availeble Shipping method</h3>
+                                <!-- ? Shipping List -->
+                                <div class="payment-list">
+                                    <!-- ? Payment Item 1 -->
+                                    <article class="payment-item">
+                                        <img
+                                            src="./assets/images/payment/delivery-1.png"
+                                            alt="Fedex Delivery"
+                                            class="payment-item__thumb"
+                                        />
+                                        <div class="payment-item__content">
+                                            <h3 class="payment-item__title">Fedex Delivery</h3>
+                                            <p class="payment-item__desc payment-item__desc--low">
+                                                Delivery: 2-3 days work
+                                            </p>
+                                        </div>
+                                        <div class="payment-item__cost-wrap">
+                                            <span class="payment-item__cost">Free</span>
+                                            <label class="cart-info__checkbox">
+                                                <input
+                                                    type="radio"
+                                                    name="checkbox-input"
+                                                    class="cart-info__checkbox-input"
+                                                    checked
+                                                />
+                                            </label>
+                                        </div>
+                                    </article>
+                                    <!-- ? Payment Item 2 -->
+                                    <article class="payment-item">
+                                        <img
+                                            src="./assets/images/payment/delivery-2.png"
+                                            alt=""
+                                            class="payment-item__thumb"
+                                        />
+                                        <div class="payment-item__content">
+                                            <h3 class="payment-item__title">DHL Delivery</h3>
+                                            <p class="payment-item__desc payment-item__desc--low">
+                                                Delivery: 2-3 days work
+                                            </p>
+                                        </div>
+                                        <div class="payment-item__cost-wrap">
+                                            <span class="payment-item__cost">$120</span>
+                                            <label class="cart-info__checkbox">
+                                                <input
+                                                    type="radio"
+                                                    name="checkbox-input"
+                                                    class="cart-info__checkbox-input"
+                                                />
+                                            </label>
+                                        </div>
+                                    </article>
+                                </div>
                             </div>
                         </div>
                         <!-- ? Checkout Right -->
                         <div class="col-4 col-xl-12">
                             <div class="cart-info">
                                 <!-- ? Cart Info Heading -->
-                                <h2 class="cart-info__sub-heading">Payment Details</h2>
+                                <h2 class="cart-info__heading cart-info__heading--lv2">Payment Details</h2>
 
                                 <div class="cart-info__row">
                                     <span>Subtotal <span class="cart-info__sub-label">(items)</span></span>
