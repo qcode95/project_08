@@ -2575,9 +2575,6 @@ html.dark {
 .like-btn--liked .like-btn__icon {
   display: none;
 }
-.like-btn__icon--liked {
-  margin-top: 6px;
-}
 
 .product-card {
   display: flex;
@@ -4092,10 +4089,18 @@ html.dark {
 .cart-info__bottom {
   margin-top: 30px;
 }
+@media screen and (max-width: 575.98px) {
+  .cart-info__bottom-row {
+    flex-direction: column;
+  }
+}
 .cart-info__continue {
   display: flex;
   align-items: flex-end;
   height: 100%;
+}
+.cart-info__continue--center {
+  align-items: center;
 }
 .cart-info__continue-link {
   display: flex;
@@ -4210,6 +4215,9 @@ html.dark {
     margin-top: 20px;
   }
 }
+.cart-info__check-all {
+  margin: 30px 0;
+}
 
 .cart-info + .cart-info {
   margin-top: 30px;
@@ -4265,7 +4273,7 @@ html.dark {
   display: flex;
   flex-direction: column;
 }
-@media screen and (max-width: 767.98px) {
+@media screen and (max-width: 991.98px) {
   .cart-item__content {
     flex-direction: column;
   }
@@ -4301,11 +4309,16 @@ html.dark {
   min-height: 44px;
   margin-top: auto;
 }
-@media screen and (max-width: 767.98px) {
+@media screen and (max-width: 991.98px) {
   .cart-item__ctrl--md-block {
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  .cart-item__ctrl {
+    gap: 8px;
   }
 }
 .cart-item__input {
@@ -4337,6 +4350,12 @@ html.dark {
   font-weight: 700;
   line-height: 145.455%;
 }
+@media screen and (max-width: 991.98px) {
+  .cart-item__total-price {
+    margin-bottom: 16px;
+    text-align: left;
+  }
+}
 @media screen and (max-width: 767.98px) {
   .cart-item__total-price {
     margin-bottom: 16px;
@@ -4355,6 +4374,22 @@ html.dark {
 }
 .cart-item__ctrl-btn:first-child {
   margin-right: 10px;
+}
+@media screen and (max-width: 767.98px) {
+  .cart-item__checkout-btn {
+    padding: 0 40px;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  .cart-item__checkout-btn {
+    padding: 0 30px;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  .cart-item__checkout-all-btn {
+    margin-top: 16px;
+    padding: 0 80px;
+  }
 }
 
 .gift-item {
