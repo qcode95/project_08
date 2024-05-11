@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Add New Card | Grocery Mart</title>
+        <title>Edit Profile | Grocery Mart</title>
 
         <!-- ? Favicon -->
         <link rel="apple-touch-icon" sizes="76x76" href="./assets/favicon/apple-touch-icon.png" />
@@ -170,24 +170,24 @@
                                     <div class="col-12">
                                         <!-- ? Add New Card Content -->
                                         <h2 class="cart-info__heading">
-                                            <img src="./assets/icons/arrow-back.svg" alt="" />
-                                            <span>Add credit or debit card</span>
+                                            <img src="./assets/icons/arrow-back.svg" alt="" class="icon" />
+                                            <span>Personal Info</span>
                                         </h2>
 
                                         <form action="" class="form form-card">
                                             <!-- ? Form Row 1 -->
                                             <div class="form__row">
                                                 <div class="form__group">
-                                                    <label for="first-name" class="form__label form-card__label">
-                                                        First Name
+                                                    <label for="full-name" class="form__label form-card__label">
+                                                        Full Name
                                                     </label>
                                                     <div class="form__text-input">
                                                         <input
                                                             type="text"
-                                                            name="first-name"
-                                                            id="first-name"
+                                                            name="full-name"
+                                                            id="full-name"
                                                             class="form__input"
-                                                            placeholder="First Name"
+                                                            placeholder="Full Name"
                                                             required
                                                         />
                                                         <img
@@ -196,19 +196,19 @@
                                                             class="form__input-icon-error"
                                                         />
                                                     </div>
-                                                    <p class="form__error">First Name must be not empty!</p>
+                                                    <p class="form__error">Full Name must be not empty!</p>
                                                 </div>
                                                 <div class="form__group">
-                                                    <label for="last-name" class="form__label form-card__label">
-                                                        Last Name
+                                                    <label for="email" class="form__label form-card__label">
+                                                        Email Address
                                                     </label>
                                                     <div class="form__text-input">
                                                         <input
-                                                            type="text"
-                                                            name="last-name"
-                                                            id="last-name"
+                                                            type="email"
+                                                            name="email"
+                                                            id="email"
                                                             class="form__input"
-                                                            placeholder="Last Name"
+                                                            placeholder="Email Address"
                                                             required
                                                         />
                                                         <img
@@ -217,87 +217,21 @@
                                                             class="form__input-icon-error"
                                                         />
                                                     </div>
-                                                    <p class="form__error">Last Name must be not empty!</p>
+                                                    <p class="form__error">Enter an email here!</p>
                                                 </div>
                                             </div>
 
                                             <!-- ? Form Row 2 -->
                                             <div class="form__row">
                                                 <div class="form__group">
-                                                    <label for="card-number" class="form__label form-card__label">
-                                                        Card Number
-                                                    </label>
-                                                    <div class="form__text-input">
-                                                        <input
-                                                            type="text"
-                                                            name="card-number"
-                                                            id="card-number"
-                                                            class="form__input"
-                                                            placeholder="Card Number"
-                                                            required
-                                                        />
-                                                        <img
-                                                            src="./assets/icons/form-error.svg"
-                                                            alt=""
-                                                            class="form__input-icon-error"
-                                                        />
-                                                    </div>
-                                                    <p class="form__error">Card number must be not empty!</p>
-                                                </div>
-                                                <div class="form__group">
-                                                    <label for="expired-date" class="form__label form-card__label">
-                                                        Expiration Date
-                                                    </label>
-                                                    <div class="form__text-input">
-                                                        <input
-                                                            type="text"
-                                                            name="expired-date"
-                                                            id="expired-date"
-                                                            class="form__input"
-                                                            placeholder="MM/YY"
-                                                            required
-                                                        />
-                                                        <img
-                                                            src="./assets/icons/form-error.svg"
-                                                            alt=""
-                                                            class="form__input-icon-error"
-                                                        />
-                                                    </div>
-                                                    <p class="form__error">Expiration date must be not empty!</p>
-                                                </div>
-                                            </div>
-
-                                            <!-- ? Form Row 3 -->
-                                            <div class="form__row">
-                                                <div class="form__group">
-                                                    <label for="cvv" class="form__label form-card__label">CVV</label>
-                                                    <div class="form__text-input">
-                                                        <input
-                                                            type="text"
-                                                            name="cvv"
-                                                            id="cvv"
-                                                            class="form__input"
-                                                            placeholder="•••"
-                                                            maxlength="3"
-                                                            required
-                                                        />
-                                                        <img
-                                                            src="./assets/icons/form-error.svg"
-                                                            alt=""
-                                                            class="form__input-icon-error"
-                                                        />
-                                                    </div>
-                                                    <p class="form__error">CVV must be not empty!</p>
-                                                </div>
-                                                <div class="form__group">
-                                                    <label for="phone" class="form__label form-card__label">
+                                                    <label for="phone-number" class="form__label form-card__label">
                                                         Phone Number
                                                     </label>
                                                     <div class="form__text-input">
                                                         <input
                                                             type="tel"
-                                                            name="phone"
-                                                            id="phone"
+                                                            name="phone-number"
+                                                            id="phone-number"
                                                             class="form__input"
                                                             placeholder="Phone Number"
                                                             maxlength="10"
@@ -311,34 +245,35 @@
                                                     </div>
                                                     <p class="form__error">Phone number must be not empty!</p>
                                                 </div>
-                                            </div>
-
-                                            <!-- ? Form Row 4 -->
-                                            <div class="form__row">
                                                 <div class="form__group">
-                                                    <label
-                                                        for=""
-                                                        class="form__label form-card__label form-card__label--low"
-                                                    >
-                                                        Card Preferences
+                                                    <label for="password" class="form__label form-card__label">
+                                                        Password
                                                     </label>
-                                                    <label class="form__checkbox">
+                                                    <div class="form__text-input">
                                                         <input
-                                                            type="checkbox"
-                                                            name=""
-                                                            id=""
-                                                            class="form__checkbox-input d-none"
+                                                            type="password"
+                                                            name="password"
+                                                            id="password"
+                                                            class="form__input"
+                                                            placeholder="•••••••••"
+                                                            minlength="6"
+                                                            required
                                                         />
-                                                        <span class="form__checkbox-label">Set as default card</span>
-                                                    </label>
+                                                        <img
+                                                            src="./assets/icons/form-error.svg"
+                                                            alt=""
+                                                            class="form__input-icon-error"
+                                                        />
+                                                    </div>
+                                                    <p class="form__error">Password must be at least 6 characters!</p>
                                                 </div>
                                             </div>
 
-                                            <!-- ? Form Row 5 -->
+                                            <!-- ? Form Row Bottom -->
                                             <div class="form-card__bottom">
                                                 <a class="btn btn--text" href="./profile.html">Cancel</a>
                                                 <button class="btn btn--primary btn--rounded form__submit-btn">
-                                                    Save card
+                                                    Edit Profile
                                                 </button>
                                             </div>
                                         </form>
