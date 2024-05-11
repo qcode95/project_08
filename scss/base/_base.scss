@@ -103,3 +103,9 @@ input:-webkit-autofill:hover {
         padding-left: 20px !important;
     }
 }
+
+.separate {
+    margin: var(--margin) 0;
+    height: 1px;
+    background: #d2d1d6;
+}
