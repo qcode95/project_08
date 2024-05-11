@@ -4203,6 +4203,9 @@ html.dark {
   }
 }
 .cart-info__heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-size: 2.4rem;
   font-weight: 700;
   line-height: 141.667%;
@@ -4795,6 +4798,11 @@ html.dark {
 .profile-container {
   margin-top: 30px;
 }
+@media screen and (max-width: 767.98px) {
+  .profile-container {
+    margin-top: 20px;
+  }
+}
 .profile__sidebar {
   padding-bottom: 30px;
   border-radius: 20px;
@@ -4867,6 +4875,19 @@ html.dark {
 }
 .profile__desc {
   margin: 4px 0 16px;
+}
+
+.form-card__label {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+.form-card__label--low {
+  margin-bottom: 10px;
+}
+.form-card__bottom {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
 }
 
 /*# sourceMappingURL=main.css.map */
