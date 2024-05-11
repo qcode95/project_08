@@ -1442,6 +1442,7 @@ html {
   --profile-sidebar-shadow-color: rgba(237, 237, 246, 0.2);
   --account-info-bg-color: #f6f6f6;
   --account-info-icon-wrap-bg-color: #fff;
+  --separate-color: #d2d1d6;
 }
 @media screen and (max-width: 991.98px) {
   html {
@@ -1543,6 +1544,9 @@ html.dark {
   --profile-sidebar-shadow-color: rgba(23, 28, 40, 0.2);
   --account-info-bg-color: #292e39;
   --account-info-icon-wrap-bg-color: #171c28;
+  --user-menu-bg-color: #373d4c;
+  --user-menu-shadow-color: rgba(0, 0, 0, 0.4);
+  --separate-color: #292e39;
 }
 @media screen and (max-width: 991.98px) {
   html.dark {
@@ -1575,7 +1579,7 @@ html.dark {
 .top-bar {
   position: relative;
   z-index: 1;
-  padding: 30px 0;
+  padding: 16px 0;
 }
 @media screen and (max-width: 991.98px) {
   .top-bar {
@@ -1785,6 +1789,14 @@ html.dark {
   height: 30px;
   background: var(--top-act-group-separate);
 }
+.top-act__user {
+  position: relative;
+}
+.top-act__user:hover .act-dropdown {
+  scale: 1;
+  opacity: 1;
+  visibility: visible;
+}
 .top-act__avatar {
   display: block;
   width: 50px;
@@ -1817,7 +1829,6 @@ html.dark {
 .act-dropdown {
   position: absolute;
   top: 48px;
-  right: -60px;
   width: min(600px, 100vw);
   padding-top: 30px;
   scale: 0;
@@ -1825,8 +1836,20 @@ html.dark {
   visibility: hidden;
   transition: opacity, visibility, scale;
   transition-duration: 0.5s;
-  transform-origin: 80% top;
   will-change: opacity, transform;
+}
+.act-dropdown--liked, .act-dropdown--cart, .act-dropdown--user {
+  transform-origin: 81% top;
+}
+.act-dropdown--liked {
+  right: -75px;
+}
+.act-dropdown--cart {
+  right: -60px;
+}
+.act-dropdown--user {
+  right: -15px;
+  width: min(300px, 100vw);
 }
 .act-dropdown__inner {
   position: relative;
@@ -1841,6 +1864,9 @@ html.dark {
   right: 90px;
   width: 45px;
   filter: var(--header-act-dropdown-arrow-color);
+}
+.act-dropdown__arrow--user {
+  right: 17px;
 }
 .act-dropdown__top {
   display: flex;
@@ -3694,6 +3720,110 @@ html.dark {
   line-height: 145.455%;
 }
 
+.user-menu__top {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.user-menu__avt {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.user-menu__name {
+  margin-bottom: 8px;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.user-menu__list {
+  margin-top: 30px;
+}
+.user-menu__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 14px 0;
+}
+.user-menu__link:hover:not(:--has-switch) {
+  text-decoration: underline;
+  color: #0071dc;
+}
+.user-menu__separate {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--separate-color);
+}
+.user-menu__label {
+  width: 60px;
+  height: 30px;
+  position: relative;
+  border-radius: 999px;
+  background: #ebebeb;
+  box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.user-menu__label:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #ffcc89, #d8860b);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  translate: 0 -50%;
+  transition: 0.3s;
+}
+.user-menu__label svg {
+  position: absolute;
+  z-index: 100;
+  width: 15px;
+  top: 50%;
+  translate: 0 -50%;
+}
+.user-menu__label svg.sun {
+  left: 8px;
+  fill: #333;
+  transition: 0.3s;
+}
+.user-menu__label svg.moon {
+  right: 8px;
+  fill: #7e7e7e;
+  transition: 0.3s;
+}
+.user-menu__toggle {
+  display: none;
+}
+.user-menu__toggle:checked + .user-menu__label {
+  background: #242424;
+}
+.user-menu__toggle:checked + .user-menu__label:after {
+  left: 55px;
+  transform: translateX(-100%);
+  background: linear-gradient(180deg, #777, #3a3a3a);
+}
+.user-menu__toggle:checked + .user-menu__label svg.sun {
+  fill: #7e7e7e;
+}
+.user-menu__toggle:checked + .user-menu__label svg.moon {
+  fill: #f6f6f6;
+}
+.user-menu__toggle:active:after {
+  width: 22px;
+}
+.user-menu__has-switch {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.home {
+  margin-bottom: 30px;
+}
 .home__container {
   margin-top: 40px;
 }

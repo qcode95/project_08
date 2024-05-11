@@ -1,0 +1,133 @@
+.user-menu {
+    &__top {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__avt {
+        width: 60px;
+        height: 60px;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+
+    &__name {
+        margin-bottom: 8px;
+        font-size: 1.8rem;
+        font-weight: 600;
+    }
+
+    &__list {
+        margin-top: 30px;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+
+        padding: 14px 0;
+
+        &:hover:not(:--has-switch) {
+            text-decoration: underline;
+
+            color: #0071dc;
+        }
+    }
+
+    &__separate {
+        margin-top: 10px;
+        padding-top: 10px;
+        border-top: 1px solid var(--separate-color);
+    }
+
+    &__label {
+        width: 60px;
+        height: 30px;
+        position: relative;
+
+        border-radius: 999px;
+
+        background: #ebebeb;
+        box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 5px;
+
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+
+            background: linear-gradient(180deg, #ffcc89, #d8860b);
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+
+            translate: 0 -50%;
+            transition: 0.3s;
+        }
+
+        svg {
+            position: absolute;
+            z-index: 100;
+
+            width: 15px;
+            top: 50%;
+
+            translate: 0 -50%;
+
+            &.sun {
+                left: 8px;
+
+                fill: #333;
+                transition: 0.3s;
+            }
+            &.moon {
+                right: 8px;
+
+                fill: #7e7e7e;
+                transition: 0.3s;
+            }
+        }
+    }
+
+    &__toggle {
+        display: none;
+
+        &:checked + .user-menu__label {
+            background: #242424;
+
+            &:after {
+                left: 55px;
+                transform: translateX(-100%);
+                background: linear-gradient(180deg, #777, #3a3a3a);
+            }
+
+            svg {
+                &.sun {
+                    fill: #7e7e7e;
+                }
+
+                &.moon {
+                    fill: #f6f6f6;
+                }
+            }
+        }
+
+        &:active:after {
+            width: 22px;
+        }
+    }
+
+    &__has-switch {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}

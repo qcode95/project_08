@@ -210,3 +210,36 @@ window.addEventListener("template-loaded", () => {
         });
     });
 });
+
+window.addEventListener("template-loaded", () => {
+    const switchBtn = document.querySelector("#switch-theme-btn");
+    const darkToggle = document.querySelector("#darkmode-toggle");
+
+    function updateTheme(isDark) {
+        document.querySelector("html").classList.toggle("dark", isDark);
+        darkToggle.checked = isDark;
+        switchBtn.querySelector("span").textContent = isDark ? "Light Mode" : "Dark Mode";
+    }
+
+    function saveTheme(isDark) {
+        localStorage.setItem("dark", isDark);
+    }
+
+    switchBtn.addEventListener("click", function () {
+        const isDark = !darkToggle.checked;
+        updateTheme(isDark);
+        saveTheme(isDark);
+    });
+
+    darkToggle.addEventListener("change", function () {
+        const isDark = this.checked;
+        updateTheme(isDark);
+        saveTheme(isDark);
+    });
+
+    const isDark = localStorage.getItem("dark") === "true";
+    updateTheme(isDark);
+});
+
+const isDark = localStorage.getItem("dark") === "true";
+updateTheme(isDark);
